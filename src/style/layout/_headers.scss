@@ -1,0 +1,35 @@
+//This file contains all the styling for the header
+
+header {
+    position: fixed; //fixed position so the header stays in place
+    z-index: 1; //this is to avoid elemnts going over the header
+    height: $header-height; //padding is added to <main> so that the header doesn't hide any content (see layout/feed)
+    padding: 0 20px;
+    width: 100vw;
+    @include shadow;
+
+    //position of the header's elements (logo on the left and profile pic on the right for small devices, logo in the center for bigger devices)
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //for bigger devices, logo is centered and profile pic to the right
+    @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .logo {
+        //logo sizing
+        height: 65px;
+        max-width: 60%;
+    }
+
+    //that's the toggleable class to show the content
+    .show {
+        display: block;
+    }
+}

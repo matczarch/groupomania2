@@ -1,0 +1,12 @@
+.footer {
+    margin: 50px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+
+    .menu_list {
+        list-style-type: none;
+
+    }
+}
